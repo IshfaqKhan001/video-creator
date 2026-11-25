@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Creator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Video Creator</h1>
+  <p>Upload images, add a title, preview, then record a video. Everything runs in your browser.</p>
+
+  <section class="controls">
+    <label>Images <input type="file" id="images" accept="image/*" multiple></label>
+    <label>Title <input type="text" id="title" placeholder="My video" value="My video"></label>
+    <label>Subtitle <input type="text" id="subtitle" placeholder="Made with video-creator"></label>
+    <label>Seconds per image <input type="number" id="duration" min="1" max="10" value="3"></label>
+    <label>Background <input type="color" id="bg" value="#111111"></label>
+    <div class="buttons">
+      <button id="previewBtn">Preview</button>
+      <button id="recordBtn">Record video</button>
+      <button id="downloadBtn" disabled>Download video</button>
+    </div>
+    <p id="status">No images yet. Upload at least 1 image to start.</p>
+  </section>
+
+  <canvas id="canvas" width="1280" height="720"></canvas>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
